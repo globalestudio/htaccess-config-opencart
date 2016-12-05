@@ -1,0 +1,11 @@
+## Forçar https apenas dos arquivos .php, .html
+# normalmente e utilizado assim
+# (.*)
+# pasta trocar para
+# .*\.(html|php)
+
+RewriteEngine On
+RewriteCond %{HTTPS} !on
+RewriteRule .*\.(html|php) https://%{HTTP_HOST}%{REQUEST_URI}
+
+## Fim Forçar https apenas dos arquivos .php, .html
